@@ -11,10 +11,11 @@ import {
 
 const GrowthStory = () => {
   const match = useMediaQuery("(max-width:1200px)");
-  const isMobile = useMediaQuery("(max-width:768px)");
   const isMatch = useMediaQuery("(max-width:992px)");
+  const isMobile = useMediaQuery("(max-width:768px)");
   const headingSize = isMatch ? "h3" : "h1";
   const headerFontSize = isMobile ? "h6" : "h5";
+  const tieleFontSize = isMobile ? "h3" : "h2";
 
   return (
     <GrowthWrapper>
@@ -79,7 +80,7 @@ const GrowthStory = () => {
 
               <Grid item xs={6}>
                 <Typography
-                  variant="h2"
+                  variant={tieleFontSize}
                   textAlign="left"
                   color="textSecondary"
                   gutterBottom
@@ -99,7 +100,7 @@ const GrowthStory = () => {
 
               <Grid item xs={6}>
                 <Typography
-                  variant="h2"
+                  variant={tieleFontSize}
                   textAlign="left"
                   color="textSecondary"
                   gutterBottom
@@ -118,7 +119,7 @@ const GrowthStory = () => {
               </Grid>
               <Grid item xs={6}>
                 <Typography
-                  variant="h2"
+                  variant={tieleFontSize}
                   textAlign="left"
                   color="textSecondary"
                   gutterBottom

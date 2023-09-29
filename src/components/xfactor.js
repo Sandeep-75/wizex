@@ -11,13 +11,15 @@ import {
 } from "@mui/material";
 
 const Xfactor = () => {
-  const isMobile = useMediaQuery("(max-width:992px)");
+  const isMatch = useMediaQuery("(max-width:992px)");
+  const isMobile = useMediaQuery("(max-width:768px)");
+  const headingSize = isMobile ? "h3" : "h2";
 
   return (
     <section>
       <XFactorWrapper>
         <Typography
-          variant="h2"
+          variant={headingSize}
           gutterBottom
           textAlign="center"
           m="auto"
@@ -31,7 +33,7 @@ const Xfactor = () => {
         </Typography>
 
         <Container maxWidth="lg">
-          <Grid container spacing={isMobile ? 10 : 20}>
+          <Grid container spacing={isMatch ? 10 : 20}>
             <Grid item xs={12} lg={6}>
               <Stack spacing={5}>
                 <Box>
@@ -80,7 +82,11 @@ const Xfactor = () => {
               <Box className="imageContainer">
                 <img className="mobileImg" src="/images/mobile.svg" />
               </Box>
-              <Typography variant="body1" mt={isMobile ? 1 : -9} textAlign="center">
+              <Typography
+                variant="body1"
+                mt={isMatch ? 1 : -9}
+                textAlign="center"
+              >
                 Proprietary Investor Dashboard
               </Typography>
             </Grid>

@@ -72,11 +72,12 @@ const rows = [
 
 const StrategyAllocation = () => {
   const isMobile = useMediaQuery("(max-width:768px)");
+  const headingSize = isMobile ? "h3" : "h2";
 
   return (
     <section>
       <AllocationWrappper>
-        <Typography variant="h2" textAlign="center">
+        <Typography variant={headingSize} textAlign="center">
           <Typography variant="span">Strategy &</Typography>{" "}
           <Typography variant="span" color="textSecondary">
             Allocation
